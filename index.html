@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="styles/estilo.css">
+	<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+</head>
+<body onload="cargando()">
+	<!--**************************precarga**************************-->
+	<div id="carga">
+	</div>
+	<!--**************************contenedor**************************-->
+	<div id="contenedor">
+		<!--**************************home**************************-->
+		<header>
+			<!--**************************navegacion**************************-->
+			<nav>
+				<input type="checkbox" id="check1">
+				<div id="logo"></div>
+				<div id="iconos">
+					<div id="user"></div>
+					<div id="market"></div>
+					<div id="menu">
+						<label for="check1">
+							<span></span>
+						</label>
+					</div>
+				</div>
+				<div id="hide">
+					<label for="check1">
+						<a href="#logo" onclick=" ">Inicio</a>
+					</label>
+					<label for="check1">
+						<a href="#sec1" onclick=" ">Tú Cuenta</a>
+					</label>
+					<label for="check1">
+						<a href="#sec2" onclick=" ">Productos</a>
+					</label>
+					<label for="check1">
+						<a href="#sec3" onclick=" ">Sobre Nosotros</a>
+					</label>
+					<label for="check1">
+						<a href="#sec4" onclick=" ">Visítanos</a>
+					</label>
+				</div>
+			</nav>
+			<div id="bg">
+				<h2>¡Bienestar y salud!</h2>
+				<h3>Más que solo farmacia...</h3>
+			</div>
+
+		</header>
+
+		<!--**************************Cuenta sec1**************************-->
+
+		<div id="sec1">
+			<div>
+				<h4>Tú cuenta</h4>
+			</div>
+			<div>
+				<div>Inicio</div>
+				<div>Regístrate</div>
+			</div>
+			<div id="busqueda">
+				<div id="search"></div>
+				<h3>Búsqueda avanzada</h3>
+			</div>
+			<div>
+				<div>
+					<div id="cat">Nombre</div>
+					<div id="pre">Precio</div>
+					<div id="tam">Tamaño</div>
+				</div>
+				<form id="formulario">
+					<!--**************************categoria busqueda**************************-->
+					<input type="text" class="boton1">
+					<!--**************************precio busqueda**************************-->
+					<input type="text" list="precios" class="boton1">
+						<datalist id="precios">
+							<option value="0,00 - 9,999.99">0,00 - 9,999.99</option>
+							<option value="10,000.00 - 19,999.99">10,000.00 - 19,999.99</option>
+							<option value="20,000.00 - 29,999.99">20,000.00 - 29,999.99</option>
+							<option value="30,000.00 - 39,999.99">30,000.00 - 39,999.99</option>
+							<option value="40,000.00 - 49,999.99">40,000.00 - 49,999.99</option>
+							<option value="50,000.00 - 59,999.99">50,000.00 - 59,999.99</option>
+							<option value="60,000.00 - Por encima">60,000.00 - Por encima</option>
+						</datalist>
+
+					<!--**************************tamaño busqueda**************************-->
+					<input type="text" list="tamaños" class="boton1">
+						<datalist id="tamaños">
+							<option value="Suelto">Suelto</option>
+							<option value="Paquete">Paquete</option>
+						</datalist>
+
+				</form>
+			</div>
+			<!-- <input type="submit" id="buscar"> -->
+			<div id="buscar">Buscar</div>
+		</div>
+
+		<!--**************************productos sec2**************************-->
+		<div id="sec2">
+			<!--**************************Bienestar fisico**************************-->
+			<h2>Productos destacados</h2>
+			<h2>Bienestar <br> Físico</h2>
+			<!-- slider 1 -->
+			<div class="scrollsnap">
+				<!-- producto 1 -->
+				<div class="product">
+					<div class="img"></div>
+					<h4>MiraLax / 10 sobres</h4>
+					<h4>Sistema Digestivo y Urinario</h4>
+					<div class="precio">2000.00</div>
+					<div id="vermas">
+						<div></div>
+						<h5>Ver más</h5>
+					</div>
+				</div>
+				<!-- producto 2 -->
+				<div class="product">
+					<div class="img"></div>
+					<h4>Diane 35 / Oral </h4>
+					<h4>Metabolismo y Nutrición</h4>
+					<div class="precio">5800.00</div>
+					<div id="vermas">
+						<div></div>
+						<h5>Ver más</h5>
+					</div>
+				</div>
+				<!-- producto 3 -->
+				<div class="product">
+					<div class="img"></div>
+					<h4>Alka-Seltzer / Tabletas</h4>
+					<h4>Sistema Digestivo y Urinario</h4>
+					<div class="precio">4400.00</div>
+					<div id="vermas">
+						<div></div>
+						<h5>Ver más</h5>
+					</div>
+				</div>
+				<!-- producto 4 -->
+				<div class="product">
+					<div class="img"></div>
+					<h4>Glisulin / Tabletas</h4>
+					<h4>Sistema Digestivo y Urinario</h4>
+					<div class="precio">2850.00</div>
+					<div id="vermas">
+						<div></div>
+						<h5>Ver más</h5>
+					</div>
+				</div>
+				<!-- producto 5 -->
+				<div class="product">
+					<div class="img"></div>
+					<h4>Mesigyna / Inyectable</h4>
+					<h4>Sistema Digestivo y Urinario</h4>
+					<div class="precio">6700.00</div>
+					<div id="vermas">
+						<div></div>
+						<h5>Ver más</h5>
+					</div>
+				</div>
+			</div>
+			<div></div>
+			<div class="botonI"></div>
+			<div class="botonD"></div>
+			<div class="cantidad">
+				<div>Cantidad</div>
+				<input type="text" placeholder="#"><!--*#*-->
+			</div>
+			<div class="carrito">
+				<div id="compra"></div>
+				<div>Añadir al carrito</div>
+			</div>	
+			
+			<!--**************************Bienestar Mental**************************-->
+			<h2>Bienestar <br> Mental</h2>
+			<!-- slider 2 -->
+			<div class="scrollsnap">
+				<!-- producto 1 -->
+				<div class="product">
+					<div class="img"></div>
+					<h4>Planifert / tabletas</h4>
+					<h4>Sistema Nervioso</h4>
+					<div class="precio">8080.00</div>
+					<div id="vermas">
+						<div></div>
+						<h5>Ver más</h5>
+					</div>
+				</div>
+				<!-- producto 2 -->
+				<div class="product">
+					<div class="img"></div>
+					<h4>Proviron / Tabletas</h4>
+					<h4>Metabolismo y Nutrición</h4>
+					<div class="precio">10000.00</div>
+					<div id="vermas">
+						<div></div>
+						<h5>Ver más</h5>
+					</div>
+				</div>
+				<!-- producto 3 -->
+				<div class="product">
+					<div class="img"></div>
+					<h4>Livial / Tabletas</h4>
+					<h4>Sistema Nervioso</h4>
+					<div class="precio">9990.00</div>
+					<div id="vermas">
+						<div></div>
+						<h5>Ver más</h5>
+					</div>
+				</div>
+				<!-- producto 4 -->
+				<div class="product">
+					<div class="img"></div>
+					<h4>Glucovance / Caja</h4>
+					<h4>Sistema Cardiovascular</h4>
+					<div class="precio">20000.00</div>
+					<div id="vermas">
+						<div></div>
+						<h5>Ver más</h5>
+					</div>
+				</div>
+				<!-- producto 5 -->
+				<div class="product">
+					<div class="img"></div>
+					<h4>Daniele / Tabletas</h4>
+					<h4>Sistema Nervioso</h4>
+					<div class="precio">3500.00</div>
+					<div id="vermas">
+						<div></div>
+						<h5>Ver más</h5>
+					</div>
+				</div>
+			</div>
+			<div></div>
+			<div class="botonI"></div>
+			<div class="botonD"></div>
+			<div class="cantidad">
+				<div>Cantidad</div>
+				<input type="text" placeholder="#"><!--*#*-->
+			</div>
+			<div class="carrito">
+				<div id="compra"></div>
+				<div>Añadir al carrito</div>
+			</div>				
+			<!--**************************Bienestar emocional **************************-->
+			<h2>Bienestar <br> Emocional</h2>
+			<!-- slider 3 -->
+			<div class="scrollsnap">
+				<!-- producto 1 -->
+				<div class="product">
+					<div class="img"></div>
+					<h4>Tinelle / Tabletas</h4>
+					<h4>Sistema Nervioso</h4>
+					<div class="precio">1800.00</div>
+					<div id="vermas">
+						<div></div>
+						<h5>Ver más</h5>
+					</div>
+				</div>
+				<!-- producto 2 -->
+				<div class="product">
+					<div class="img"></div>
+					<h4>Yasmin / Caja</h4>
+					<h4>Demartología</h4>
+					<div class="precio">12000.00</div>
+					<div id="vermas">
+						<div></div>
+						<h5>Ver más</h5>
+					</div>
+				</div>
+				<!-- producto 3 -->
+				<div class="product">
+					<div class="img"></div>
+					<h4>Progynova / Caja</h4>
+					<h4>Sistema Digestivo y Urinario</h4>
+					<div class="precio">15800.00</div>
+					<div id="vermas">
+						<div></div>
+						<h5>Ver más</h5>
+					</div>
+				</div>
+				<!-- producto 4 -->
+				<div class="product">
+					<div class="img"></div>
+					<h4>Drospera / Tabletas</h4>
+					<h4>Metabilismo y Nutrición</h4>
+					<div class="precio">3300.00</div>
+					<div id="vermas">
+						<div></div>
+						<h5>Ver más</h5>
+					</div>
+				</div>
+				<!-- producto 5 -->
+				<div class="product">
+					<div class="img"></div>
+					<h4>Dipronova / Caja</h4>
+					<h4>Sistema Digestivo y Urinario</h4>
+					<div class="precio">2900.00</div>
+					<div id="vermas">
+						<div></div>
+						<h5>Ver más</h5>
+					</div>
+				</div>
+			</div>
+			<div></div>
+			<div class="botonI"></div>
+			<div class="botonD"></div>
+			<div class="cantidad">
+				<div>Cantidad</div>
+				<input type="text" placeholder="#"><!--*#*-->
+			</div>
+			<div class="carrito">
+				<div id="compra"></div>
+				<div>Añadir al carrito</div>
+			</div>
+		<!--**************************fin sec2**************************-->
+		</div>
+
+		<!--**************************Sobre nosotros sec3**************************-->
+		<div id="sec3">
+			<div>Sobre nosotros</div>
+			<div id="slider">
+				<div class="anuncio"></div>
+				<div class="anuncio"></div>
+				<div class="anuncio"></div>
+			</div>
+			<div id="dots">
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+			</div>
+		<!--**************************Fin sec3**************************-->
+		</div>
+
+		<!--**************************visitenos sec4**************************-->
+		<div id="sec4">
+			<div>Visítenos</div>
+			<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3929.2158456735547!2d-84.1196341629906!3d9.99902156863001!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scr!4v1551802955813" width="200" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<!--**************************fin sec4**************************-->
+		</div>
+
+		<!--**************************visitenos sec5**************************-->
+		<div id="sec5">
+			<h4>Pagos mediante:</h4>
+			<div id="master">
+				<div></div>
+			</div>
+			<div id="visa">
+				<div></div>
+			</div>
+			<h4>Envios mediante:</h4>
+			<div id="globo">
+				<div></div>
+			</div>
+			<!--**************************fin sec5**************************-->
+		</div>
+		<!--**************************footer**************************-->
+		
+		<footer>
+			<div id="partone">
+				<h3>Nosotros</h3>
+				<h4>• Servicios</h4>
+				<h4>• Promociones</h4>
+				<h4>• Ayuda</h4>
+			</div>
+
+			<div id="parttwo">
+				<h3>Productos</h3>
+				<h4>• Demartología</h4>
+				<h4>• Infeciones y Parasitismo</h4>
+				<h4>• Metabolismo y Nutrición</h4>
+				<h4>• Oticos Y oftamológicos</h4>
+				<h4>• Sistema Cardiovascular</h4>
+				<h4>• Sistema Digestivo y Urinario</h4>
+				<h4>• Sistema Nervioso</h4>
+				<h4>• Sistema Respiratorio</h4>
+				<h4>• Sistema Endocrino e Inmunológico</h4>
+				<h4>• Otros</h4>
+			</div>
+			<h4>• 2019 Farmacia Kekepá | Todos los Derechos Reservados.</h4>
+
+		</footer>
+	<!--**************************Fin contenedor**************************-->
+	</div>
+
+	<!--**************************Scripts**************************-->
+
+	<script src="js/precarga.js"></script>
+</body>
+</html>
