@@ -1,0 +1,90 @@
+// Crear una base de datos de IndexedDB para almacenar las conversaciones
+const dbName = 'chatDatabase';
+const dbVersion = 1;
+const objectStoreName = 'conversations';
+
+const request = indexedDB.open(dbName, dbVersion);
+
+request.onerror = function(event) {
+  console.log('Error al abrir la base de datos');
+};
+
+request.onsuccess = function(event) {
+  console.log('Base de datos abierta correctamente');
+
+  // Obtener la base de datos
+  const db = event.target.result;
+
+  // Obtener todas las conversaciones almacenadas en la base de datos
+  const transaction = db.transaction([objectStoreName], 'readonly');
+  const objectStore = transaction.objectStore(objectStoreName);
+
+  const conversationsRequest = objectStore.getAll();
+
+  conversationsRequest.onerror = function(event) {
+    console.log('Error al obtener las conversaciones');
+  };
+
+  conversationsRequest.onsuccess = function(event) {
+    console.log('Conversaciones obtenidas correctamente');
+
+    // Dibujar las conversaciones en el canvas
+    chatMessages = conversationsRequest.result;
+    dibujarChat();
+  };
+};
+
+request.onupgradeneeded = function(event) {
+  console.log('Actualizando la base de datos');
+
+  // Crear un object store para las conversaciones
+  const db = event.target.result;
+  const objectStore = db.createObjectStore(objectStoreName, { keyPath: 'id', autoIncrement: true });
+
+  // Crear un índice para buscar conversaciones por usuario
+  objectStore.createIndex('user', 'user', { unique: false });
+};
+
+function almacenarConversacionEnBlockchain(conversacion) {
+  // Aquí deberías utilizar una biblioteca de blockchain, como Ethereum, para almacenar las conversaciones en la cadena de bloques
+}
+
+function almacenarConversacionEnIndexedDB(conversacion) {
+  // Almacenar la conversación en IndexedDB
+  const transaction = db.transaction([objectStoreName], 'readwrite');
+  const objectStore = transaction.objectStore(objectStoreName);
+
+  const request = objectStore.add(conversacion);
+
+  request.onerror = function(event) {
+    console.log('Error al almacenar la conversación');
+  };
+
+  request.onsuccess = function(event) {
+    console.log('Conversación almacenada correctamente');
+
+    // Dibujar la conversación en el canvas
+    chatMessages.push(conversacion.message);
+    dibujarChat();
+  };
+}
+
+function enviarMensaje() {
+  // Obtener el mensaje del input
+  const message = document.getElementById('message').value;
+
+  // Cifrar el mensaje utilizando la clave pública del destinatario
+  const encryptedMessage = cifrarMensaje(message, publicKey);
+
+  // Crear un objeto conversación
+  const conversacion = {
+    user: username,
+    message: encryptedMessage,
+    timestamp: Date.now()
+  };
+
+  // Almacenar la conversación en blockchain
+  almacenarConversacionEnBlockchain(conversacion);
+
+  // Almacenar la conversación en IndexedDB
+  almacenarConversacionEnIndexedDB
